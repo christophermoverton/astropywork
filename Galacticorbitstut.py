@@ -1,3 +1,9 @@
+## to run this tutorial you'll need to have astro-gala astroquery modules installed in your conda environment.
+## in bash just activate your conda environment and enter:
+## pip install astro-gala astroquery
+## Read below for downloading the fits gala fits data.  You'll need to uncomment line 75,76, and 77 when first running 
+## this tutorial.  Then recomment these lines (avoiding redundant downloads)
+
 # astropy imports
 import astropy.coordinates as coord
 from astropy.table import QTable
