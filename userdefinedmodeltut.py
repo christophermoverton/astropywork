@@ -282,6 +282,8 @@ class SineNew(Fittable1DModel):
 
     @staticmethod
     def fit_deriv(x, a, b, c, d):
+        ### original tutorial computations???? parital derivatives of a,b,c,d parameters yields different values relative to tutorial 
+        ### shown below...noting the error in tutorial is greater relative to fit_deriv function shown below...
         d_a = np.sin(b*x+c)
         d_b = a*np.cos(b*x+c)*x
         d_c = a*np.cos(b*x+c)
