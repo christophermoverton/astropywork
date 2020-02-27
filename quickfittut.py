@@ -323,7 +323,7 @@ print(cov_diag)
 ## here's another method 
 # see https://www.researchgate.net/publication/329889581_Fitting_algorithm_of_sine_wave_with_partial_period_waveforms_and_non-uniform_sampling_based_on_least-square_method
 def errorcomputation(fit, x, y, N):
-    return [(1.0/(N)*sum(((fit - y))**2))**.5, sum((fit - y))**2]
+    return [(1.0/(N)*sum(((fit - y))**2))**.5, sum((fit - y)**2)]
 
 s_error = errorcomputation(best_fit_sine(x3),x3,y3, N)
 
