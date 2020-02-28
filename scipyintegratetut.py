@@ -159,7 +159,7 @@ def lum_m(m, imf):
     if t1: 
         return (.23)*m**(.23)*imf(m)
     elif t2:
-        return m**4*imf(m)
+        return (m**4)*imf(m)
     elif t3:
         return (1.5)*m**(3.5)*imf(m)
     elif t4:
