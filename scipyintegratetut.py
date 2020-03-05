@@ -166,8 +166,8 @@ def lum_m(m, imf):
         return 3200*m*imf(m)
 ## note owing to luminosity function boundaries we can't compute for stars of luminosity less than .1
 ## so this represents the lower boundary of integration.  To avoid function step discontinuities we should
-## integrate piece wise
-l_m1, _ = integrate.quad(lum_m, a=.1, b=.429999, args=(salpeter, )) 
+## integrate piece wise...that is, we should have a continuos function on such intervals
+l_m1, _ = integrate.quad(lum_m, a=.100001, b=.429999, args=(salpeter, )) 
 l_m2, _ = integrate.quad(lum_m, a=.4300001, b=.6, args=(salpeter, ))##+ integrate.quad(lum_m, a=.4300001, b=.6, args=(salpeter, ))
 l_o1, _ = integrate.quad(lum_m, a=15, b=19.99999, args=(salpeter, )) 
 l_o2, _ = integrate.quad(lum_m, a=20.00001, b=99.99999, args=(salpeter, ))##+ integrate.quad(lum_m, a=20.00001, b=99.99999, args=(salpeter, ))
